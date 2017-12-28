@@ -1,5 +1,5 @@
   # project name
-    project (com.github.yourusername.yourrepositoryname)
+    project (com.github.kmal-kenneth.monitor)
 
     # the oldest stable cmake version we support
     cmake_minimum_required (VERSION 2.6)
@@ -12,18 +12,24 @@
     set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
 
     # what to call that directory where we install data too
-    set (PKGDATADIR "${DATADIR}/com.github.yourusername.yourrepositoryname")
+    set (PKGDATADIR "${DATADIR}/com.github.kmal-kenneth.monitor")
 
-    set (EXEC_NAME "com.github.yourusername.yourrepositoryname")
+    set (EXEC_NAME "com.github.kmal-kenneth.monitor")
     set (RELEASE_NAME "A hello world.")
     set (VERSION "0.1")
     set (VERSION_INFO "whats up world")
 
     # we're about to use pkgconfig to make sure dependencies are installed so let's find pkgconfig first
     find_package(PkgConfig)
+    
+    set (SYSTEM_MONITOR_DEPS
+        gtk+-3.0
+        gee-0.8
+        granite
+    )
 
     # now let's actually check for the required dependencies
-    pkg_check_modules(DEPS REQUIRED gtk+-3.0)
+    pkg_check_modules(DEPS REQUIRED ${SYSTEM_MONITOR_DEPS})
 
     add_definitions(${DEPS_CFLAGS})
     link_libraries(${DEPS_LIBRARIES})
@@ -40,10 +46,14 @@
     include(ValaPrecompile)
     vala_precompile(VALA_C ${EXEC_NAME}
         src/Application.vala
+        src/MainWindow.vala
+        src/Sidebar.vala
 
     # tell what libraries to use when compiling
     PACKAGES
         gtk+-3.0
+        gee-0.8
+        granite
     )
 
     # tell cmake what to call the executable we just made
@@ -53,12 +63,13 @@
     install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 
     # install our .desktop file so the Applications menu will see it
-    install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.yourusername.yourrepositoryname.desktop DESTINATION ${DATADIR}/applications/)
+    install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.kmal-kenneth.monitor.desktop DESTINATION ${DATADIR}/applications/)
 
     # install our .appdata.xml file so AppCenter will see it
-    install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.yourusername.yourrepositoryname.appdata.xml DESTINATION ${DATADIR}/metainfo/)
+    install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.kmal-kenneth.monitor.appdata.xml DESTINATION ${DATADIR}/metainfo/)
     
     # Translation files
     set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}")
     add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
     add_subdirectory (po)
+    

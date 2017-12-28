@@ -1,15 +1,14 @@
-Source: hello-packaging
+Source: com.github.kmal-kenneth.monitor
 Section: x11
 Priority: extra
-Maintainer: Your Name <you@emailaddress.com>
+Maintainer: Kenet Mauricio Acuña <kmal.kenneth@live.com>
 Build-Depends: cmake (>= 2.8),
                cmake-elementary,
                debhelper (>= 8.0.0),
                valac-0.26 | valac (>= 0.26)
 Standards-Version: 3.9.3
 
-Package: hello-packaging
+Package: com.github.kmal-kenneth.monitor
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Hey young world
- This is a Hello World written in Vala using CMake build system.
+Description: A litle ystem monitor.
