@@ -1,0 +1,16 @@
+/home/kenma/Projects/monitor/build/CMakeFiles/install.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/list_install_components.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/rebuild_cache.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/install/strip.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/install/local.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/com.github.yourusername.yourrepositoryname.dir
+/home/kenma/Projects/monitor/build/CMakeFiles/edit_cache.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/rebuild_cache.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/edit_cache.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/po.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/install.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/list_install_components.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/i18n.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/pot.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/install/local.dir
+/home/kenma/Projects/monitor/build/po/CMakeFiles/install/strip.dir
