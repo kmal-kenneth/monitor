@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-bcd09fe5b91957eb5251a99416488e1b com.github.yourusername.yourrepositoryname_valac.stamp
-2273b335817aa072980f444fc742dad1 src/Application.c
