@@ -41,10 +41,10 @@ namespace monitor {
      	}
      	
      	private void update_text_data () {
-     	    Timeout.add_seconds (1, () => {
-     	        cpu_usage.set_text (("%s %d%%").printf (_("CPU:"), resources.get_cpu_usage()));
-     	        memory_usage.set_text (("%s %d%%").printf (_("Memory:"), resources.get_memory_usage()));
-     	        memory_usage_detail.set_text (("%.1f %s / %.1f %s").printf (resources.used_memory, _("GiB"), resources.total_memory, _("GiB")));
+     	    Timeout.add_seconds (2, () => {
+     	        cpu_usage_text = ("%s %d%%").printf (_("CPU:"), resources.get_cpu_usage());
+     	        memory_usage_text = ("%s %d%%").printf (_("Memory:"), resources.get_memory_usage());
+     	        memory_usage_detail_text = ("%.1f %s / %.1f %s").printf (resources.used_memory, _("GiB"), resources.total_memory, _("GiB"));
                 return true;
             });
      	}

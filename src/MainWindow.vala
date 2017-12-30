@@ -85,8 +85,6 @@ namespace monitor {
             process_view.set_model (sort_model);
 
             sidebar = new Sidebar();
-            sidebar.width_request = 200;
-            sidebar.orientation = Gtk.Orientation.VERTICAL;
 
             layout = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             layout.pack1 (sidebar, false, false);
